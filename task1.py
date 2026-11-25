@@ -1,4 +1,4 @@
-
+from idlelib.debugobj_r import WrappedObjectTreeItem
 
 import pygame as pg
 
@@ -20,19 +20,13 @@ screen.fill(MINT)  # заливка фона
 pg.display.set_caption("Игра")
 clock = pg.time.Clock()
 
-
-
-
-
-
 r = 250
 pg.draw.circle(screen, RED, (WIDTH / 2, HEIGHT / 2), r)
-pg.draw.rect(screen, ORANGE, (WIDTH / 2 - r, HEIGHT / 2, r*2, r ))
-pg.draw.polygon(screen, BLACK, [[WIDTH / 2, HEIGHT / 2 - r], [WIDTH / 2 - r, HEIGHT / 2] , [WIDTH / 2 + r, HEIGHT / 2]])
+pg.draw.rect(screen, ORANGE, (WIDTH / 2 - r, HEIGHT / 2, r * 2, r))
+pg.draw.polygon(screen, BLACK, [[WIDTH / 2, HEIGHT / 2 - r], [WIDTH / 2 - r, HEIGHT / 2], [WIDTH / 2 + r, HEIGHT / 2]])
 pg.draw.polygon(screen, GREEN, [[WIDTH / 2 - r, HEIGHT / 2], [WIDTH / 2 + r, HEIGHT / 2], [WIDTH / 2, HEIGHT / 2 + r]])
-pg.draw.line(screen, WHITE, [WIDTH, HEIGHT / 2] , [WIDTH / 2, HEIGHT / 2 - r], 4)
-pg.draw.line(screen, WHITE, [0, HEIGHT / 2] , [WIDTH / 2, HEIGHT / 2 - r], 4)
-
+pg.draw.line(screen, WHITE, [WIDTH, HEIGHT / 2], [WIDTH / 2, HEIGHT / 2 - r], 4)
+pg.draw.line(screen, WHITE, [0, HEIGHT / 2], [WIDTH / 2, HEIGHT / 2 - r], 4)
 
 # отображаем нарисованные объекты
 pg.display.update()
